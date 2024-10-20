@@ -301,6 +301,26 @@ object cats extends SubModule {
   object native extends NativeCrossModule
 }
 
+object scodec extends SubModule {
+
+  def scalaVersion = versions.scala
+
+
+  def artifactName = "iron-scodec"
+
+  def ivyDeps = Agg(
+    ivy"org.scodec::scodec-core::2.3.2",
+    ivy"org.scodec::scodec-bits::1.1.27",
+  )
+
+  object test extends Tests {
+    
+  }
+    
+//  object js extends JSCrossModule
+
+}
+
 object upickle extends SubModule {
 
   def artifactName = "iron-upickle"
